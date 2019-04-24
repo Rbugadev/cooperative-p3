@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<head> <link href="/pageCss.css" rel="stylesheet"/></head>
+<body>
+<div id="centre">
+<ui:composition template="/masterAdmin.xhtml">
+<ui:define name="title">Inscription</ui:define>
+<ui:define name="content">
+
+<div id="inscription">
+<h:form>
+
+<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Ajouter un nouvel adhérent</h1></b:column>
+</b:row>
+<br/>
+
+
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40"  placeholder="Nom" value="#{mbAdherent.ajoutAdherent.nom}" required="true" required-message="Ce champs ne doit pas être vide"/></b:column>
+</b:row> 
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" padding="2px" placeholder="Prenom" value="#{mbAdherent.ajoutAdherent.prenom}" required="true"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="Mail" value="#{mbAdherent.ajoutAdherent.adresseMail}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="Identifiant" value="#{mbAdherent.ajoutAdherent.login}" required="true"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputSecret size="40" margin-bottom="2px" placeholder="Mot de passe" value="#{mbAdherent.ajoutAdherent.password}" required="true" /></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputSecret size="40" margin-bottom="2px" placeholder="Confirmer le mot de passe" required="true" /></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="Numero de portable" value="#{mbAdherent.ajoutAdherent.numTelPortable}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="Numero de fixe" value="#{mbAdherent.ajoutAdherent.numTelFixe}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="Adresse" value="#{mbAdherent.ajoutAdherent.adresse}"/></b:column>
+</b:row> 
+
+ <b:row>
+<b:column span="2" offset="5">  <b:commandButton action="#{mbAdherent.addunAdherent()}" value="Valider" style="color:#666" icon-size="2x" iconAwesome="thumbs-up"/> </b:column>
+</b:row>
+
+
+
+
+</h:form> 
+</div> 
+
+<b:column span="10" offset="2"> <h:form><img src="img/bg/enfantInscription.jpg"></img></h:form> </b:column>
+
+</ui:define>
+</ui:composition>
+
+
+
+</div>
+
+ 
+</body>
+</html>

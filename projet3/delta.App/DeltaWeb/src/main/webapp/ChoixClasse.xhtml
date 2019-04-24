@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"> 
+
+<h:head></h:head> 
+<ui:composition template="/masterAdmin.xhtml">
+
+	<ui:define name="title">Page 1</ui:define>
+	
+<!--  Coder ici -->
+
+	<ui:define name="content">
+		<h:form>
+	<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Choisissez une classe</h1></b:column>
+</b:row>
+<br/>
+
+</h:form>
+<br></br>
+<h:form>
+  <b:dataTable offset="4" span="4"  value="#{mbClasse.listeClasse}"
+               var="classe" select="true" onselect="ajax:mbClasse.ondbselect(classe, typeOfSelection, indexes)" info="false">
+   
+    <b:dataTableColumn value="#{classe.classe}"/>
+
+  </b:dataTable>
+</h:form>
+<br></br>
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+<body> 
+
+</body> 
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"> 
+
+<h:head></h:head> 
+<ui:composition template="/masterAdmin.xhtml">
+
+	<ui:define name="title">Page 1</ui:define>
+	
+<!--  Coder ici -->
+
+	<ui:define name="content">
+	
+	<h:form>
+	
+						
+						<br/>
+						<br/>
+		<h:outputLabel id="labell" value="#{mbFourniture.testFive.nom}" for="test" />
+		
+		<b:selectOneMenu value="#{mbFourniture.testFive}"  id="test">
+		<f:ajax listener="#{mbFourniture.onChange()}" render="labell"></f:ajax>
+		<f:selectItems value="#{mbFourniture.cats}" var="cat" 
+							itemLabel="#{cat.nom}"  itemValue="#{cat}"/>
+						</b:selectOneMenu>
+						
+						
+
+
+	<h:inputText value="#{mbFourniture.idFourniture}" /><br/>
+	<h:commandButton action="#{mbFourniture.recherche()}" value="Rechercher" /><br/>
+	#{mbFourniture.rechercheFourniture.id}
+	<h:outputLabel value="#{mbFourniture.rechercheFourniture.libelle}" />
+	
+	<br/><br/>
+	Affichage des fournitures en fonction de la sous cat
+	<br/><br/>
+	
+	
+
+
+		<fieldset>
+			<legend>Les Fournitures</legend>
+			<h:dataTable id="tableau" value="#{mbFourniture.sousCats}" var="fourniture" border="1">
+				<h:column>
+					<f:facet name="image">Photo</f:facet>
+					<img src="image/#{fourniture.nom}" alt="photo"/>
+				</h:column>	
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+					<h:outputLabel value="#{fourniture.id}" />
+				</h:column>		
+			</h:dataTable>
+		</fieldset>
+	
+
+
+
+<br></br>
+
+
+		<fieldset>
+			<legend>Les Fournitures par id sous cat</legend>
+			
+			<h:dataTable value="#{mbFourniture.allFournitureByIdSousCat}" var="fourniture" border="1">
+				
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+					<h:outputLabel value="#{fourniture.libelle}" />
+				</h:column>		
+			</h:dataTable>
+		</fieldset>
+	</h:form>
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+<body> 
+
+</body> 
+</html>
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+

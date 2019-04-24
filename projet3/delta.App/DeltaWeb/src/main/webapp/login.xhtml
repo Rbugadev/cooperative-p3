@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<h:outputStylesheet name="masterStyle.css" />
+</h:head>
+<h:body>form
+<ui:composition template="/ConnectedArche.xhtml">
+<ui:define name="content">
+
+	<div>
+
+	<h:form>
+		<b:row>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+			<b:column span="5" offset="3">
+				<b:inputText placeholder="Utilisateur" required="true" label="" colMd="4" labelColMd="2" value="#{mbLogin.login}" >
+					<f:facet name="prepend">
+						<b:iconAwesome value="user" />
+					</f:facet>
+				</b:inputText>
+			</b:column>
+		</b:row>
+		<b:row>
+			<b:column span="5" offset="3">
+				<b:inputSecret typehead-hint="false" placeholder="Mot de passe" label="" required="true"  colMd="4" labelColMd="2" value="#{mbLogin.password}">
+					<f:facet name="prepend">
+						<b:iconAwesome name="key" />
+					</f:facet>
+				</b:inputSecret>
+			</b:column>
+		</b:row>
+		<b:row>
+			<b:column span="4" offset="5">
+				<b:commandButton iconAwesome="fa-sign-in" value="Se connecter" look="primary" action="#{mbLogin.connexion()}" style="padding-right:10px"></b:commandButton>
+				<b:button iconAwesome="fa-address-card" value="S'inscrire" look="info" href="/DeltaWeb/inscription.xhtml" style="padding-right:10px"></b:button>
+			</b:column>
+			
+			
+			<b:column span="2" >
+				
+			</b:column>
+		</b:row>
+	</h:form>
+</div>
+
+
+</ui:define>
+</ui:composition>
+</h:body>
+</html>

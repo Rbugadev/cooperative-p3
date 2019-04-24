@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head></h:head>
+<ui:composition template="/masterAdmin.xhtml">
+
+	<ui:define name="title">Page 1</ui:define>
+
+	<!--  Coder ici -->
+
+	<ui:define name="content">
+		<h:form>
+		
+		<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Etat du stock</h1></b:column>
+</b:row>
+<br/>
+		
+			<b:dataTable value="#{mbFourniture.allFourniture}" var="fourniture" span="6" offset="3" style="box-shadow: 8px 8px 12px #aaa">
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Fourniture</li>
+							
+						</ul>
+					</f:facet>
+     <label style="text-align: center"> #{fourniture.libelle} </label>
+      <br />
+      
+    </b:dataTableColumn>
+				<b:dataTableColumn width="20px">
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Description</li>
+						</ul>
+					</f:facet>
+     
+      <br />
+	<img src="image/#{fourniture.nomImage}" alt="photo" width="150"/>
+    </b:dataTableColumn>
+    
+     
+				<b:dataTableColumn width="10px">
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Quantité</li>
+						</ul>
+					</f:facet>
+ 		 #{fourniture.stock.quantite}
+      <br />
+	
+    </b:dataTableColumn>
+    
+   
+				
+			</b:dataTable>
+		</h:form>
+		<br></br>
+
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+<body>
+
+
+
+</body>
+</html>

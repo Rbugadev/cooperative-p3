@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<head> <link href="/pageCss.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div id="centre">
+<ui:composition template="/masterUser.xhtml">
+<ui:define name="content">
+
+<div id="inscription">
+<h:form>
+
+
+
+
+
+
+
+<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Ajoutez vos enfants</h1></b:column>
+</b:row>
+<br/>
+
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40"  placeholder="Prenom" value="#{mbaEnfant.ajoutEnfant.prenom}"  /></b:column>
+</b:row> 
+
+
+<b:row>
+<b:column span="6" offset="3"> <b:dateTimePicker format="DD.MM.YYYY" size="40" margin-bottom="5px" placeholder="Date de naissance" value="#{mbaEnfant.ajoutEnfant.dateDeNaissance}"/></b:column>
+</b:row>
+
+<br/>
+ <b:row>
+<b:column span="2" offset="5">  <b:commandButton action="#{mbaEnfant.addEnfant()}" value="Valider" style="background-color:#4682B4; color:white" icon-size="2x" iconAwesome="thumbs-up"/> </b:column>
+</b:row>
+
+
+
+</h:form> 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+<b:column offset="1"> <img src="img/bg/divider2.jpg"></img> </b:column>
+</ui:define>
+</ui:composition>
+
+
+</div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<head> <link href="/pageCss.css" rel="stylesheet"/></head>
+<body>
+<div id="centre">
+<ui:composition template="/masterUser.xhtml">
+<ui:define name="title">Inscription</ui:define>
+<ui:define name="content">
+
+<div id="inscription">
+<h:form>
+
+
+
+
+
+
+
+<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Ajoutez vos enfants</h1></b:column>
+</b:row>
+<br/>
+
+
+<h:outputLabel id="labell" value="#{mbScolarite.classe.classe}" for="test" />
+		
+		<b:selectOneMenu value="#{mbScolarite.classe}"  id="test">
+		<f:ajax listener="#{mbScolarite.onChange()}" render="labell"></f:ajax>
+		<f:selectItems value="#{mbScolarite.classeListe}" var="cat" 
+							itemLabel="#{classe.classe}"  itemValue="#{classe}"/>
+						</b:selectOneMenu>
+
+
+
+</h:form> 
+
+
+</div>
+</ui:define>
+</ui:composition>
+
+
+</div>
+
+ 
+</body>
+</html>

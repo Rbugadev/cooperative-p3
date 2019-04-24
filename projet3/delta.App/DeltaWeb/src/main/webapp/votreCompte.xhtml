@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<head> <link href="/pageCss.css" rel="stylesheet"/></head>
+<body>
+<div id="centre">
+<ui:composition template="/masterUser.xhtml">
+<ui:define name="title">Inscription</ui:define>
+<ui:define name="content">
+
+<div id="inscription">
+<h:form>
+
+
+<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Votre compte</h1></b:column>
+</b:row>
+<br/>
+
+
+<!-- <b:row> -->
+<!-- <b:column span="6" offset="3"> <b:inputText id="compteId" size="40"  placeholder="id" value="#{mbAdherent.idAdherent}" rendered="false"/></b:column> -->
+<!-- </b:row> -->
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText id="compteNom" size="40"  placeholder="Nom" value="#{mbAdherent.ajoutAdherent.nom}" /></b:column>
+</b:row> 
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText id="comptePrenom" size="40" padding="2px" placeholder="Prenom" value="#{mbAdherent.ajoutAdherent.prenom}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText id="compteMail" size="40" margin-bottom="2px" placeholder="E-mail" value="#{mbAdherent.ajoutAdherent.adresseMail}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText id="comptelogin" size="40" margin-bottom="2px" placeholder="login" value="#{mbAdherent.ajoutAdherent.login}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputSecret id="comptePassword" size="40" margin-bottom="2px" placeholder="mdp" value="#{mbAdherent.ajoutAdherent.password}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputSecret id="compteMp" size="40" margin-bottom="2px" placeholder="Confirmer le mot de passe"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText id="comptePortable" size="40" margin-bottom="2px" placeholder="n° portable" value="#{mbAdherent.ajoutAdherent.numTelPortable}"/></b:column>
+</b:row>
+
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="n° fixe" value="#{mbAdherent.ajoutAdherent.numTelFixe}"/></b:column>
+</b:row>
+
+<b:row>
+<b:column span="6" offset="3"> <b:inputText size="40" margin-bottom="2px" placeholder="adresse" value="#{mbAdherent.ajoutAdherent.adresse}"/></b:column>
+</b:row> 
+
+ <b:row>
+<b:column span="2" offset="5">  <b:commandButton action="#{mbAdherent.majAdherent()}"  value="Modifier" style="background-color:#4682B4; color:white" icon-size="2x" iconAwesome="thumbs-up"/> </b:column>
+</b:row>
+
+
+</h:form> 
+</div>
+
+<b:column span="10" offset="2"> <h:form><img src="img/bg/enfantInscription.jpg"></img></h:form> </b:column>
+
+</ui:define>
+</ui:composition>
+
+
+</div>
+
+ 
+</body>
+</html>

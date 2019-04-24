@@ -1,0 +1,230 @@
+#headerMC {
+	background-color: #1976D2;
+}
+
+
+body {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+   _background-image: url("/DeltaWeb/img/header_vierge.jpg");
+   
+}
+
+
+#header, #footer{
+	margin-top: 20px;
+	 background: #2b2b2b;
+  margin-top: 0px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+   text-align: center;
+}
+#centre{
+	height: 100%;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 0px solid #222222;
+	margin-bottom: 2px;
+	display: block;
+	overflow-h: scroll;
+	align-content: center;
+	
+}
+
+#inscription{
+	margin-left: auto;
+	margin-right: auto;
+	width:50%;
+	heigth:100%;
+	
+	
+	font-family: Raleway;
+	font-weight: 300;
+	color: #333;
+}
+
+#header {
+	margin-bottom: 20px;
+}
+
+#footer{
+	background-color: #222222;
+	position: absolute;
+	bottom: 0;
+	width:100%;
+ 
+}
+
+
+
+h1{
+	font-family: Raleway;
+	font-weight: 300;
+	color: #333;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  background-color: #16a085;
+  color: white;
+}
+.navbar-default {
+  border-color: transparent;
+  background-color: #dadada;
+}
+
+.navbar-toggle {
+  border-color: transparent;
+  border: 0px solid transparent;
+}
+a {
+  color: #3498db;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover, a:focus {
+  color: #c0392b;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:before, a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+
+
+
+#headerMC {
+	background-color: #689F38;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#bodyMC{
+	background-color:  #8BC34A;
+	overflow: hidden;
+  	white-space: nowrap;
+  	font-weight: 300;
+}
+
+#footerMC{
+	background-color: #689F38;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#headerE {
+	background-color: #1976D2;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#bodyE{
+	background-color:  #2196F3;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#footerE{
+	background-color: #1976D2;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#headerA {
+	background-color: #e17055;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#bodyA{
+	background-color: #fab1a0;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#footerA{
+	background-color: #e17055;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#headerP {
+	background-color: #e17055;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#bodyP{
+	background-color: #fab1a0;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#footerP{
+	background-color: #e17055;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#headerAl {
+	background-color: #F5AB35;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	color: white;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#bodyAl {
+	background-color: #8BC34A;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+#footerAl {
+	background-color:#F5AB35;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+.well {
+	overflow: hidden;
+  	
+}

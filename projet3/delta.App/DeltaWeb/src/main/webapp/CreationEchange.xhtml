@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+
+<h:body>
+<div id="centre">
+<f:metadata>
+		<f:event listener="#{mbEchange.init()}" type="preRenderView"></f:event>
+	</f:metadata>
+
+<ui:composition template="/masterUser.xhtml">
+
+	<ui:define name="title">Page 1</ui:define>
+
+	<!--  Coder ici -->
+
+	<ui:define name="content">
+	
+	
+		<h:form>
+		
+		
+		<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Publier une annonce</h1></b:column>
+</b:row>
+<br/>
+<br/>
+<!-- plop -->
+			<br />
+			<b:row>
+				<b:column span="4" offset="4">
+					<b:inputTextarea rows="5"
+						placeholder="description (Donnez des détails sur votre échange état marque couleur etc...)"
+						value="#{mbEchange.echange.description}" style="border: 2px solid #4682B4"/>
+				</b:column>
+			</b:row>
+			<br />
+			<b:row>
+				<b:column span="2" offset="4">
+					<b:inputText placeholder="quantité"
+						value="#{mbEchange.echange.quantite}" style="width:80px; border: 2px solid #4682B4"/>
+				</b:column>
+			</b:row>
+			<br />
+			<b:row>
+				<b:column span="3" offset="4">
+					<b:commandButton action="#{mbEchange.createEchange()}"
+						value="Enregistrer" 
+					style="background-color:#4682B4; color:white; width:150px; height:40px; text-align:center"/>
+				</b:column>
+			</b:row>
+		</h:form>
+		<br />
+		<br />
+		
+		
+		
+		<h:form>
+			<b:dataTable value="#{mbEchange.listEchangeById}" var="echange" span="8" offset="2" info="false"  >
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Fourniture</li>
+							<li>Quantité</li>
+						</ul>
+					</f:facet>
+      #{echange.fourniture.libelle}
+      <br />
+      #{echange.quantite}
+    </b:dataTableColumn>
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Description</li>
+						</ul>
+					</f:facet>
+      #{echange.description}
+      <br />
+					<img src="image/#{echange.fourniture.nomImage}" alt="photo" />
+  </b:dataTableColumn>
+					<b:dataTableColumn>
+						<f:facet name="header">
+							<ul
+								style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+								<li>date de création</li>
+								<li>date de cloture</li>
+							</ul>
+						</f:facet>
+						
+      #{echange.dateCreation}
+    <br />
+    #{echange.dateCloture}
+    </b:dataTableColumn>
+			</b:dataTable>
+		</h:form>
+		
+
+
+
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+</div>
+</h:body>
+</html>

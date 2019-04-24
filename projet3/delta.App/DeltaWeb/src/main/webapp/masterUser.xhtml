@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+<h:head><h:outputStylesheet name="CSS/masterStyle.css" />
+
+</h:head>
+<h:body>
+	<h:form>
+		<b:container>
+		
+		</b:container>
+	</h:form>
+
+	<b:navBar brand="Coopér'active" brandHref="/DeltaWeb/homeUser.xhtml" fluid="true" inverse="true" >
+		<b:navbarLinks>
+				<b:dropMenu iconAwesome="child" value="Enfant(s)">
+					<b:form>
+						<b:commandButton iconAwesome="fas fa-users" value="Afficher enfant(s)" action="#{mbaEnfant.rechercherListeEnfantsByIdAdherent()}"/>
+						<f:param name="idParentConnected" value="#{mbConnected.user.id}" />
+					</b:form>
+					<b:navLink iconAwesome="fas fa-user-plus" value="Enregistrer enfant" href="/DeltaWeb/enfantAjout.xhtml"></b:navLink>
+				</b:dropMenu>
+				<b:dropMenu iconAwesome="fas fa-comments" value="Annonces">
+				<b:navLink iconAwesome="fas fa-list-ul" value="Afficher annonces" href="/DeltaWeb/Echange.xhtml"></b:navLink>
+				<b:navLink iconAwesome="fas fa-comment" value="Créer une annonce" href="/DeltaWeb/CreationEchange.xhtml"></b:navLink>
+				</b:dropMenu>
+				<b:navLink value="Votre compte" href="/DeltaWeb/votreCompte.xhtml"></b:navLink>
+	</b:navbarLinks>
+	
+	
+		<!-- Following line is needed for TBS 3.0.1 (panel content overflow issue) -->
+		<b:navbarLinks pull="right"><b:navLink value="    " href="#"></b:navLink></b:navbarLinks>
+  <b:navbarLinks pull="right"><b:navLink value="    " href="#"></b:navLink></b:navbarLinks>
+		  <b:navbarLinks pull="right" styleClass="hidden-xs">
+		  	<b:dropMenu  value="#{mbConnected.user.prenom} #{mbConnected.user.nom} ">
+		  		<h:form>
+		  			<b:commandLink action="#{mbLogin.deconnexion()}" value="Déconnexion"></b:commandLink>
+	  			</h:form>	
+		  	</b:dropMenu>
+		  </b:navbarLinks>
+	</b:navBar>
+	
+	
+	<div id="centre">
+		<ui:insert name="content"> </ui:insert>
+		
+	</div>
+	
+	
+	
+		<b:navBar position="bottom" inverse="true">
+			<b:label value="Adherent"></b:label>
+		</b:navBar>
+	
+</h:body>
+</html>
+
+
+	

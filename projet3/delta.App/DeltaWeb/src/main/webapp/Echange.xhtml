@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+
+
+<h:body>
+<f:metadata>
+		<f:event listener="#{mbEchange.init()}" type="preRenderView"></f:event>
+	</f:metadata>
+<div id="centre">
+<ui:composition template="/masterUser.xhtml">
+<ui:define name="title">Page 1</ui:define>
+<ui:define name="content">
+		<h:form>
+<b:row>
+ <b:column span="6" offset="3"><h1 style="color:#4682B4; font-family: lato; font-size:50px" align="center" >Echanges disponibles</h1></b:column>
+</b:row>
+<br/>
+		
+		
+			<b:dataTable value="#{mbEchange.listEchange}" var="echange" span="8" offset="2" info="false">
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Fourniture</li>
+							
+						</ul>
+					</f:facet>
+      #{echange.fourniture.libelle}
+     
+    </b:dataTableColumn>
+    
+    <b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							
+							<li>Quantité</li>
+						</ul>
+					</f:facet>
+  
+      #{echange.quantite}
+    </b:dataTableColumn>
+    
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Description</li>
+						</ul>
+					</f:facet>
+     
+     
+	<img src="image/#{echange.fourniture.nomImage}" alt="photo" width="150" /> #{echange.description}
+    </b:dataTableColumn>
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Coordonnées</li>
+						</ul>
+					</f:facet>
+      #{echange.adherent.nom}
+      <br />
+      #{echange.adherent.adresseMail}
+      <br />
+      #{echange.adherent.numTelPortable}
+    </b:dataTableColumn>
+				<b:dataTableColumn>
+					<f:facet name="header">
+						<ul
+							style="margin-bottom: 0; list-style-type: none; padding-left: 0">
+							<li>Date de création</li>
+						</ul>
+					</f:facet>
+      #{echange.dateCreation}
+    </b:dataTableColumn>
+			</b:dataTable>
+		
+
+<b:row style="padding-top:5px">
+<b:column span="2" offset="2">  <b:commandButton action="/CreationEchange.xhtml" value="Publier votre annonce" style="background-color:#4682B4; color:white; width:400px; height:40px"/> 
+</b:column>
+</b:row>
+
+</h:form>
+</ui:define>
+</ui:composition>
+</div>
+</h:body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+</h:head>
+<h:body>
+
+<ui:composition template="/masterUser.xhtml">
+<ui:define name="title">Adherent</ui:define>
+<ui:define name="content">
+<h:form>
+	<b:container>
+		<!-- Ligne 1  -->
+		<b:row>
+			<b:column span="4">
+				<b:row>
+					<b:column>
+						<div id="headerMC">
+							<h1 align="center">Mon Compte</h1>
+						</div>
+						<div id="bodyMC">
+							<b:column span="3">
+								<p align="center"><b:iconAwesome  value="fas fa-id-badge" size="5x"></b:iconAwesome></p> 
+							</b:column>
+							<b:column span="1"><h3 align="center">#{mbConnected.user.prenom} #{mbConnected.user.nom}</h3></b:column>	
+						</div>
+						<div id="footerMC">
+							<p align="center"><b:commandButton value="Modifier" look="primary" action="/votreCompte.xhtml" /></p>
+						</div>
+					</b:column>
+				</b:row>
+			</b:column>
+			<b:column span="4">
+				<b:row>
+					<b:column >
+					<div id="headerE">
+							<h1 align="center">Enfants</h1>
+						</div>
+						<div id="bodyE">
+							<p align="center" >
+								<b:iconAwesome align="center" value="fab fa-child" size="5x"></b:iconAwesome><br/>
+							</p>	
+						</div>
+						<div id="footerE">
+							<p align="center"><b:commandButton value="Afficher" look="success" action="/afficherEnfants.xhtml"></b:commandButton></p>
+						</div>
+					</b:column>
+				</b:row>
+			</b:column>
+			<b:column span="4">
+			
+			</b:column>
+			<b:column span="4">
+				<b:row>
+					<b:column >
+						<div id="headerA">
+							<h1 align="center">Annonces</h1>
+						</div>
+						<div id="bodyA">
+							<p align="center" >
+								<b:iconAwesome align="center" value="fas fa-bullhorn" size="5x" /><br/>
+							</p>	
+						</div>
+						<div id="footerA">
+							<p align="center"><b:commandButton value="Afficher" look="primary" action="/Echange.xhtml"></b:commandButton></p>
+						</div>
+					</b:column>
+				</b:row>
+			</b:column>
+			<b:column span="6">
+			
+			</b:column>
+		</b:row>
+		<b:row><p style="margin-left:20px; margin-top: 25px;"></p></b:row>
+		<b:row>
+			<b:column span="4">
+				<b:row>
+						<div id="headerP">
+							<h1 align="center">Photos</h1>
+						</div>
+						<div id="bodyP">
+							<b:carousel id="parque2" style="width:400px" disabled="true" >
+						  		<b:carouselItem>
+							    	<img src="image/four1.jpg" alt="Fourniture 1" />
+							  	</b:carouselItem>
+							  	<b:carouselItem>
+							    	<img src="image/four2.jpg" alt="Fourniture 2" />
+							  	</b:carouselItem>
+							  	<b:carouselItem>
+							    	<img src="image/four3.jpg" alt="Fourniture 3" />
+							 	 </b:carouselItem>
+							</b:carousel>
+						</div>
+						<div id="footerP">
+							<p align="center" >
+								<b:iconAwesome align="center" value="fas fa-camera-retro" size="5x" /><br/>
+							</p>	
+						</div>
+				</b:row>
+			</b:column>
+			<b:column span="1">
+			</b:column>
+			<b:column span="7"> 
+					<div id="headerAl">
+						<h1 align="center">Avis important</h1>
+					</div>
+					<b:row><p style="margin-left:20px; margin-top: 25px;"></p></b:row>
+					<div>
+					<b:carousel id="parque" style="width:650px" disabled="true" interval="7000">
+				  		<b:carouselItem>
+					    	<b:well>
+							<h3>Pour rappel</h3>
+							La coopérative scolaire constituée en association autonome, personne morale distincte de l’école
+							ou de l’établissement scolaire, dispose de la capacité juridique, et doit se conformer aux dispositions de l’article 5 de la loi 1901 (déclarations à la Préfecture, tenue des registres légaux, assemblée générale...) et à toute autre disposition légale concernant les associations de droit privé (dispositions fiscales notamment)
+							</b:well>	
+					  	</b:carouselItem>
+					  	<b:carouselItem>
+					    	<b:well>
+							<h3>Texto 2</h3>
+							La coopérative scolaire constituée en association autonome, personne morale distincte de l’école
+							ou de l’établissement scolaire, dispose de la capacité juridique, et doit se conformer aux dispositions de l’article 5 de la loi 1901 (déclarations à la Préfecture, tenue des registres légaux, assemblée générale...) et à toute autre disposition légale concernant les associations de droit privé (dispositions fiscales notamment)
+							</b:well>	
+					  	</b:carouselItem>
+					  	<b:carouselItem>
+					    	<b:well>
+							<h3>Texto 3</h3>
+							La coopérative scolaire constituée en association autonome, personne morale distincte de l’école
+							ou de l’établissement scolaire, dispose de la capacité juridique, et doit se conformer aux dispositions de l’article 5 de la loi 1901 (déclarations à la Préfecture, tenue des registres légaux, assemblée générale...) et à toute autre disposition légale concernant les associations de droit privé (dispositions fiscales notamment)
+							</b:well>	
+					 	 </b:carouselItem>
+					</b:carousel>		
+						
+					</div>
+					<div id="footerAl">
+						<p align="center" >
+							<b:iconAwesome align="center" value="fas fa-exclamation-triangle" size="5x" /><br/>
+						</p>
+					</div>
+			</b:column>
+		</b:row>
+		<!-- Ligne 3  -->
+		<b:row>
+			<b:column span="4">
+				<b:row>
+					<b:column>
+						<b:row>
+							
+						</b:row>
+						<b:row>
+						</b:row>
+						<b:row>
+							
+						</b:row>
+					</b:column>
+				</b:row>
+			</b:column>
+			<b:column span="4">
+				<b:row>
+					<b:column>
+						<b:row>
+						</b:row>
+						<b:row>
+				
+						</b:row>
+						<b:row>
+						</b:row>
+					</b:column>
+				</b:row>
+			</b:column>
+			<b:column span="4" style-class="">
+
+			</b:column>
+		</b:row>
+	</b:container>
+</h:form>
+
+</ui:define>
+</ui:composition>
+
+</h:body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
